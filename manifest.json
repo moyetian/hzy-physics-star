@@ -1,0 +1,17 @@
+{
+  "name": "给何芷滢同学的物理星球毕业纪念册",
+  "short_name": "物理星球纪念册",
+  "description": "一份可爱治愈、星空梦幻的毕业纪念网页。",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8fbff",
+  "theme_color": "#4d7cff",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

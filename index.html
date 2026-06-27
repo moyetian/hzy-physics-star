@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="给何芷滢同学的物理星球毕业纪念册，一份可爱治愈、星空梦幻的毕业礼物。"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#4d7cff" />
+    <title>给何芷滢同学的物理星球毕业纪念册</title>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="sky">
+      <span class="star star-a"></span>
+      <span class="star star-b"></span>
+      <span class="star star-c"></span>
+      <span class="star star-d"></span>
+      <span class="orbit orbit-one"></span>
+      <span class="orbit orbit-two"></span>
+      <span class="soft-cloud cloud-one"></span>
+      <span class="soft-cloud cloud-two"></span>
+    </div>
+
+    <header class="hero">
+      <nav class="nav" aria-label="页面导航">
+        <a href="#planets">星球地图</a>
+        <a href="#letter">老师的话</a>
+        <a href="#future">未来信箱</a>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Physics Planet Memory Book</p>
+          <h1>给何芷滢同学的物理星球毕业纪念册</h1>
+          <p class="lead">
+            这里没有考试，也没有标准答案。这里有一只会动的线条小狗、几颗会发光的物理星球，
+            还有一些想留给你的、可以慢慢读的话。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#planets">进入星球地图</a>
+            <a class="button ghost" href="#letter">先读一封信</a>
+          </div>
+        </div>
+
+        <div class="mascot-card" id="mascotCard" aria-label="原创线条小狗星球伙伴">
+          <div class="moon"></div>
+          <div class="dog-stage">
+            <span class="doodle-star one"></span>
+            <span class="doodle-star two"></span>
+            <span class="tiny-paw"></span>
+            <span class="dog-orbit-line"></span>
+            <div class="gif-frame">
+              <img
+                class="line-dog-gif"
+                id="lineDog"
+                src="./assets/line-dog-953.gif"
+                alt="会动的线条小狗"
+              />
+            </div>
+          </div>
+          <div class="speech">
+            <strong>线条小狗说：</strong>
+            <span id="petLine">欢迎来到你的物理星球，我会在这里摇尾巴等你。</span>
+            <small>点小狗会掉出星星和爪印，也会换一句悄悄话。</small>
+            <div class="pet-actions">
+              <button class="pet-action" id="petButton" type="button">摸摸小狗</button>
+              <button class="pet-action ghost" id="nextLineButton" type="button">换一句话</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section birthday-panel" aria-labelledby="birthday-title">
+        <div>
+          <p class="eyebrow">Birthday Orbit</p>
+          <h2 id="birthday-title">8 月 20 日，是一颗特别的星星</h2>
+          <p>
+            从 2011 年 8 月 20 日开始，宇宙多了一位很会笑、很有生命力的小旅行者。
+            她一路长大，一路把热闹、可爱和一点点小倔强带给身边的人。
+          </p>
+        </div>
+        <div class="countdown" aria-live="polite">
+          <span id="ageDays">计算中</span>
+          <small>来到这个世界的天数</small>
+          <span id="nextBirthday">计算中</span>
+          <small>距离下一个 8 月 20 日</small>
+        </div>
+      </section>
+
+      <section class="section planets" id="planets" aria-labelledby="planets-title">
+        <p class="eyebrow">Tiny Galaxy Map</p>
+        <h2 id="planets-title">正在运行的物理星系</h2>
+        <p class="section-intro">
+          这不是普通地图，而是一张给何芷滢的小小星系运行图。五颗物理星球会沿着自己的轨道转动，
+          点一下任意星球，就能打开它藏着的话。
+        </p>
+
+        <div class="planet-grid orbit-stage" id="planetGrid" aria-label="可点击的物理星球轨道图"></div>
+      </section>
+
+      <section class="section letter" id="letter" aria-labelledby="letter-title">
+        <div class="paper">
+          <p class="eyebrow">A Small Letter</p>
+          <h2 id="letter-title">写给何芷滢的一封毕业短信</h2>
+          <p>何芷滢：</p>
+          <p>
+            认识你的这段时间里，我最先记住的并不是分数，而是你很鲜活的样子。
+            你会笑，会闹，会因为可爱的小动物和喜欢的东西突然开心起来；
+            你也会在一些很小的地方，让人感觉到你的善良和真诚。
+            这些东西不会写进成绩单，但它们真的很重要。
+          </p>
+          <p>
+            以后你会去到新的教室，遇见新的老师和同学，也会遇到一些不那么容易的题目。
+            如果某一天你觉得自己不够厉害，不要急着把自己看扁。
+            物理里有惯性，人也有自己的节奏。慢一点没关系，绕一点路也没关系，
+            只要你还愿意往前走，路就会一点一点亮起来。
+          </p>
+          <p>
+            希望你一直保留那份可爱、活泼和好奇心，也希望你慢慢学会照顾自己的心情。
+            开心的时候就大方地笑，难过的时候也不用假装没事。
+            毕业不是把这一段日子结束掉，而是把它折成一颗小星星，放进以后的人生里。
+          </p>
+          <p class="signature">一个陪你走过一段路的物理老师</p>
+        </div>
+      </section>
+
+      <section class="section future" id="future" aria-labelledby="future-title">
+        <p class="eyebrow">Future Mailbox</p>
+        <h2 id="future-title">未来信箱</h2>
+        <p class="section-intro">
+          有些话现在读刚刚好，有些话适合长大一点再打开。没有复杂密码，只有时间帮忙保管。
+        </p>
+        <div class="mailbox" id="mailbox"></div>
+      </section>
+    </main>
+
+    <dialog class="planet-dialog" id="planetDialog">
+      <button class="close" type="button" aria-label="关闭">×</button>
+      <p class="eyebrow" id="dialogLabel"></p>
+      <h3 id="dialogTitle"></h3>
+      <p id="dialogText"></p>
+      <p class="dialog-note" id="dialogNote"></p>
+    </dialog>
+
+    <footer class="footer">
+      <p>这是一份原创纪念网页。愿何芷滢的下一段旅程，有小猫小狗、有星光，也有自己的方向。</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

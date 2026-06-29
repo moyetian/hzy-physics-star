@@ -1,4 +1,4 @@
-const CACHE_NAME = "he-zhiying-physics-star-v25";
+const CACHE_NAME = "he-zhiying-physics-star-v26";
 const ASSETS = [
   "./",
   "./index.html",

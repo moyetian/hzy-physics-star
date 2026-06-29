@@ -10,6 +10,7 @@
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#4d7cff" />
     <title>给何芷滢同学的物理星球毕业纪念册</title>
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -27,6 +28,9 @@
 
     <header class="hero">
       <nav class="nav" aria-label="页面导航">
+        <a href="#toolbox">星光工具箱</a>
+        <a href="#games">学习小游戏</a>
+        <a href="#mood">情绪小屋</a>
         <a href="#planets">星球地图</a>
         <a href="#letter">老师的话</a>
         <a href="#future">未来信箱</a>
@@ -41,7 +45,7 @@
             还有一些想留给你的、可以慢慢读的话。
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#planets">进入星球地图</a>
+            <a class="button primary" href="#toolbox">领取今日星光</a>
             <a class="button ghost" href="#letter">先读一封信</a>
           </div>
         </div>
@@ -90,6 +94,289 @@
           <small>来到这个世界的天数</small>
           <span id="nextBirthday">计算中</span>
           <small>距离下一个 8 月 20 日</small>
+        </div>
+      </section>
+
+      <section class="section toolbox" id="toolbox" aria-labelledby="toolbox-title">
+        <div class="toolbox-heading">
+          <div>
+            <p class="eyebrow">Starlight Toolbox</p>
+            <h2 id="toolbox-title">今天也可以带走一点星光</h2>
+          </div>
+          <p>
+            不用登录，也不会上传。这里的便签和清单只保存在当前设备里，像一张放在抽屉里的小纸条。
+          </p>
+        </div>
+
+        <div class="toolbox-grid">
+          <article class="daily-card" aria-live="polite">
+            <p class="eyebrow">Daily Spark</p>
+            <h3 id="dailyTitle">正在抽取今日星光</h3>
+            <p class="daily-formula" id="dailyFormula">计算中</p>
+            <p class="daily-advice" id="dailyAdvice">小狗正在翻找今天的幸运公式。</p>
+            <p class="daily-action" id="dailyAction">今日小任务：等待生成。</p>
+            <div class="tool-actions">
+              <button class="tool-button" id="newSparkButton" type="button">换一张星光卡</button>
+              <button class="tool-button ghost" id="copySparkButton" type="button">复制给自己</button>
+              <button class="tool-button soft" id="doneSparkButton" type="button">完成今日小任务</button>
+            </div>
+            <small class="tool-status" id="copySparkStatus"></small>
+          </article>
+
+          <article class="mission-card">
+            <div class="mission-top">
+              <div>
+                <p class="eyebrow">Memory Checklist</p>
+                <h3>星光纪念清单</h3>
+              </div>
+              <strong id="missionCount">0/7</strong>
+            </div>
+            <div class="mission-progress" aria-hidden="true">
+              <span id="missionBar"></span>
+            </div>
+            <ul class="mission-list" id="missionList"></ul>
+            <button class="tool-button ghost" id="resetMissionButton" type="button">重新开始清单</button>
+          </article>
+
+          <article class="wish-card">
+            <p class="eyebrow">Pocket Note</p>
+            <h3>给未来自己的便签</h3>
+            <p>
+              可以写下一句愿望、一件想记住的小事，或者给未来自己的提醒。便签会自动保存在这台设备上。
+            </p>
+            <textarea
+              id="wishNote"
+              maxlength="240"
+              placeholder="例：希望下一次打开这里的时候，我已经更勇敢一点。"
+            ></textarea>
+            <div class="note-meta">
+              <span id="wishCount">0/240</span>
+              <span id="wishSavedAt">尚未保存</span>
+            </div>
+            <div class="tool-actions">
+              <button class="tool-button" id="saveWishButton" type="button">保存便签</button>
+              <button class="tool-button ghost" id="clearWishButton" type="button">清空</button>
+            </div>
+          </article>
+
+          <article class="data-card">
+            <p class="eyebrow">Local Data</p>
+            <h3>小数据抽屉</h3>
+            <p>这里可以导出或清理只保存在当前设备里的记录。</p>
+            <div class="data-summary" id="dataSummary"></div>
+            <div class="tool-actions">
+              <button class="tool-button ghost" id="exportDataButton" type="button">导出记录</button>
+              <button class="tool-button ghost" id="clearLearningButton" type="button">清空学习记录</button>
+              <button class="tool-button ghost" id="clearMoodButton" type="button">清空情绪小屋</button>
+              <button class="tool-button soft" id="clearAllDataButton" type="button">清空全部本地记录</button>
+            </div>
+            <small class="tool-status" id="dataStatus"></small>
+          </article>
+        </div>
+      </section>
+
+      <section class="section games" id="games" aria-labelledby="games-title">
+        <div class="games-heading">
+          <div>
+            <p class="eyebrow">Physics Playground</p>
+            <h2 id="games-title">物理游乐场</h2>
+          </div>
+          <p>
+            200 道快问题、200 张配对卡、10 个常考实验。答案不重要，重要的是让知识动起来。
+          </p>
+        </div>
+
+        <div class="games-grid">
+          <article class="game-card quiz-game">
+            <div class="game-card-top">
+              <p class="eyebrow">Quick Quiz</p>
+              <span id="quizProgress">题库 200</span>
+            </div>
+            <h3>物理快问星</h3>
+            <p class="game-question" id="quizQuestion">题目生成中</p>
+            <div class="quiz-options" id="quizOptions"></div>
+            <p class="game-feedback" id="quizFeedback" aria-live="polite">选一个你觉得对的答案。</p>
+            <div class="tool-actions">
+              <button class="tool-button" id="nextQuizButton" type="button">下一题</button>
+              <button class="tool-button ghost" id="resetQuizButton" type="button">重新开始</button>
+            </div>
+          </article>
+
+          <article class="game-card match-game">
+            <div class="game-card-top">
+              <p class="eyebrow">Formula Match</p>
+              <span id="matchScore">题库 200</span>
+            </div>
+            <h3>公式配对机</h3>
+            <p class="game-question">
+              给 <strong id="matchPrompt">概念</strong> 找到最合适的公式或说法。
+            </p>
+            <div class="match-options" id="matchOptions"></div>
+            <p class="game-feedback" id="matchFeedback" aria-live="polite">点一下你认为匹配的卡片。</p>
+            <button class="tool-button ghost" id="newMatchButton" type="button">换一组</button>
+          </article>
+
+          <article class="game-card lab-game">
+            <div class="game-card-top">
+              <p class="eyebrow">Mini Lab</p>
+              <span id="experimentLabel">实验</span>
+            </div>
+            <h3 id="labTitle">趣味实验室</h3>
+            <p class="game-question" id="labQuestion">
+              调整力和质量，看看小星球会不会跑得更快。
+            </p>
+            <div class="lab-tabs" id="labTabs" aria-label="选择实验"></div>
+            <div class="lab-controls">
+              <label>
+                <span><span id="controlOneLabel">推力</span> <strong id="forceValue">8 N</strong></span>
+                <input id="forceSlider" type="range" min="2" max="20" value="8" />
+              </label>
+              <label>
+                <span><span id="controlTwoLabel">质量</span> <strong id="massValue">4 kg</strong></span>
+                <input id="massSlider" type="range" min="1" max="10" value="4" />
+              </label>
+            </div>
+            <div class="lab-visual" id="labVisual" aria-hidden="true"></div>
+            <p class="lab-result">
+              <span id="labResultLabel">加速度</span>：<strong id="accelerationValue">2.0 m/s²</strong>
+            </p>
+            <p class="game-feedback" id="motionHint" aria-live="polite">同样的力，质量越小，加速度越大。</p>
+            <button class="tool-button soft" id="completeLabButton" type="button">记录这次实验</button>
+          </article>
+        </div>
+
+        <div class="learning-companion" aria-label="物理复习陪伴面板">
+          <article class="review-panel mistake-nebula">
+            <div class="review-panel-top">
+              <div>
+                <p class="eyebrow">Mistake Nebula</p>
+                <h3>错题星云</h3>
+              </div>
+              <strong id="mistakeCount">0</strong>
+            </div>
+            <div class="nebula-list" id="mistakeList" aria-live="polite"></div>
+            <div class="tool-actions">
+              <button class="tool-button ghost" id="reviewMistakeButton" type="button">再练错题</button>
+              <button class="tool-button ghost" id="clearMistakesButton" type="button">清空星云</button>
+            </div>
+          </article>
+
+          <article class="review-panel knowledge-map">
+            <div class="review-panel-top">
+              <div>
+                <p class="eyebrow">Knowledge Map</p>
+                <h3>知识点地图</h3>
+              </div>
+              <strong id="knowledgeTotal">0%</strong>
+            </div>
+            <div class="knowledge-list" id="knowledgeMap"></div>
+          </article>
+
+          <article class="review-panel achievement-panel">
+            <div class="review-panel-top">
+              <div>
+                <p class="eyebrow">Quiet Badges</p>
+                <h3>学习成就</h3>
+              </div>
+              <strong id="achievementCount">0/0</strong>
+            </div>
+            <div class="achievement-list" id="achievementList"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section mood-house" id="mood" aria-labelledby="mood-title">
+        <div class="mood-heading">
+          <div>
+            <p class="eyebrow">Little Mood House</p>
+            <h2 id="mood-title">情绪小屋</h2>
+          </div>
+          <p>
+            累的时候，可以先在这里停一会儿。这里不会判断你，只帮你把心情轻轻放下来。
+          </p>
+        </div>
+
+        <div class="mood-grid">
+          <article class="mood-card mood-weather-card">
+            <p class="eyebrow">Mood Weather</p>
+            <h3>情绪天气</h3>
+            <div class="weather-options" id="weatherOptions" aria-label="选择今天的情绪天气"></div>
+            <p class="mood-response" id="weatherResponse" aria-live="polite">选一个最接近现在的天气就好。</p>
+          </article>
+
+          <article class="mood-card breathing-card">
+            <p class="eyebrow">Breathing Planet</p>
+            <h3>呼吸星球</h3>
+            <div class="breathing-planet" id="breathingPlanet" aria-hidden="true">
+              <span id="breathingPhase">吸气</span>
+            </div>
+            <button class="tool-button soft" id="breathingButton" type="button">开始呼吸</button>
+          </article>
+
+          <article class="mood-card dog-comfort-card">
+            <p class="eyebrow">Dog Companion</p>
+            <h3>小狗陪伴</h3>
+            <p class="mood-response" id="comfortLine">你不用马上开心起来，先坐一会儿也可以。</p>
+            <div class="tool-actions">
+              <button class="tool-button soft" id="comfortButton" type="button">听一句悄悄话</button>
+              <button class="tool-button ghost" id="guardButton" type="button">让小狗守住这件事</button>
+            </div>
+          </article>
+
+          <article class="mood-card bubble-card">
+            <p class="eyebrow">Soft Pop</p>
+            <h3>星星泡泡</h3>
+            <p class="bubble-message" id="bubbleMessage">点掉一颗泡泡，把一口气慢慢放出去。</p>
+            <div class="bubble-stage" id="bubbleStage" aria-label="点击星星泡泡解压"></div>
+            <div class="bubble-calm" aria-hidden="true"><span id="bubbleCalmBar"></span></div>
+            <button class="tool-button ghost" id="resetBubblesButton" type="button">换一池泡泡</button>
+          </article>
+
+          <article class="mood-card cloud-card">
+            <p class="eyebrow">Cloud Sort</p>
+            <h3>整理云朵</h3>
+            <p class="cloud-guide" id="cloudGuide">先点一朵云，再把它放进合适的篮子。</p>
+            <div class="cloud-bank" id="cloudBank"></div>
+            <div class="cloud-buckets" id="cloudBuckets"></div>
+            <button class="tool-button ghost" id="resetCloudsButton" type="button">重新整理</button>
+          </article>
+
+          <article class="mood-card vent-card">
+            <p class="eyebrow">Soft Note</p>
+            <h3>倾诉空间</h3>
+            <div class="vent-prompts" id="ventPrompts"></div>
+            <textarea
+              id="ventNote"
+              maxlength="360"
+              placeholder="不用写完整句子，只写几个词也可以。"
+            ></textarea>
+            <div class="note-meta">
+              <span id="ventCount">0/360</span>
+              <span id="ventSavedAt">尚未保存</span>
+            </div>
+            <div class="tool-actions">
+              <button class="tool-button" id="saveVentButton" type="button">折成小星星</button>
+              <button class="tool-button ghost" id="clearVentButton" type="button">清空</button>
+            </div>
+            <div class="mood-stars" id="ventStars" aria-live="polite"></div>
+          </article>
+
+          <article class="mood-card help-card">
+            <p class="eyebrow">Help Note</p>
+            <h3>求助小纸条</h3>
+            <p class="mood-response">
+              如果有些事已经重到一个人拿不动，可以把它交给可靠的人一起拿。
+            </p>
+            <div class="help-options" id="helpOptions"></div>
+            <p class="help-message" id="helpMessage">点一个对象，小屋会帮你生成一句可以复制的话。</p>
+            <button class="tool-button ghost" id="copyHelpButton" type="button">复制这句话</button>
+          </article>
+
+          <article class="mood-card mood-timeline-card">
+            <p class="eyebrow">Tiny Timeline</p>
+            <h3>情绪记录</h3>
+            <div class="mood-timeline" id="moodTimeline" aria-live="polite"></div>
+          </article>
         </div>
       </section>
 
@@ -152,6 +439,15 @@
       <p>这是一份原创纪念网页。愿何芷滢的下一段旅程，有小猫小狗、有星光，也有自己的方向。</p>
     </footer>
 
-    <script src="./script.js"></script>
+    <div class="update-toast" id="updateToast" hidden>
+      <span>纪念册有新版本。</span>
+      <button type="button" id="refreshAppButton">刷新一下</button>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./learning.js"></script>
+    <script src="./mood.js"></script>
+    <script src="./lab.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
